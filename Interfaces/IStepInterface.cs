@@ -1,4 +1,3 @@
-using TodoAspNetAPI.Dto.StepDtos;
 using TodoAspNetAPI.Models;
 
 namespace TodoAspNetAPI.Interfaces

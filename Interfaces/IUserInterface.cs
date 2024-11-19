@@ -1,4 +1,3 @@
-using TodoAspNetAPI.Dto.UserDtos;
 using TodoAspNetAPI.Models;
 
 namespace TodoAspNetAPI.Interfaces

@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 using TodoAspNetAPI.Dto.UserDtos;
 using TodoAspNetAPI.Interfaces;
 using TodoAspNetAPI.Mappers;
@@ -58,7 +57,7 @@ namespace TodoAspNetAPI.Controllers
                         Password = createUserDto.Password
                     };
                     await userInterface.CreateUser(userModel);
-                    return Ok(userModel.ToUserDto());
+                    return Created("user", userModel.ToUserDto());
                 }
             }
             catch (Exception ex)

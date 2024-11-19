@@ -65,7 +65,7 @@ namespace TodoAspNetAPI.Controllers
                     Target = target
                 };
                 var stepResult = await stepInterface.CreateStep(stepModel);
-                return Ok(stepResult.ToStepDto());
+                return Created("step", stepResult.ToStepDto());
             }
             catch (Exception ex)
             {

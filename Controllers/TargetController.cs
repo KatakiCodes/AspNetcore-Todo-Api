@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 using TodoAspNetAPI.Dto.TargetDtos;
 using TodoAspNetAPI.Interfaces;
 using TodoAspNetAPI.Mappers;
@@ -67,7 +66,7 @@ namespace TodoAspNetAPI.Controllers
                     User = user
                 };
                 var targetResult = await targetInteface.CreateTarget(targetModel);
-                return Ok(targetResult.ToTargetDto());
+                return Created("target", targetResult.ToTargetDto());
             }
             catch (Exception ex)
             {
